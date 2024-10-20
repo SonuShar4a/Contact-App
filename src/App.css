@@ -1,0 +1,237 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.container input {
+  background: transparent;
+  border-radius: 18px;
+  color: white;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  padding-left: 3rem;
+  justify-content: center;
+  margin-right: 2rem;
+}
+
+
+.field :required:invalid {
+  border-radius: 2px solid red;
+}
+
+form .inbox .error-message {
+  display: none;
+  color: red;
+}
+
+.field:required:invalid +.error-message {
+  display: block;
+}
+
+.container ::placeholder,
+type {
+  color: white;
+}
+
+.container button {
+  border-radius: 1rem;
+  width: 5rem;
+}
+
+.container button i {
+  font-size: 2.5rem;
+}
+
+.container .icon {
+  position: relative;
+  font-size: 25px;
+  top: 16px;
+  left: 40px;
+  color: white;
+}
+
+.list {
+  margin-top: 2rem;
+  background: #edc780;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.list:hover{
+  transform: translate3d(24px, 7px, 21px);
+}
+
+.list .user {
+  font-size: 4rem;
+  color: orange;
+
+}
+
+.list .delete {
+  font-size: 4rem;
+  color: orange;
+  margin-right: 1rem;
+}
+
+.list .edit {
+  font-size: 4rem;
+  margin-right: 1rem;
+}
+
+.content {
+  line-height: 0px;
+  display: grid;
+  width: 50rem;
+  justify-items: start;
+  grid-template-columns: repeat(2, 17rem);
+}
+
+.end {
+  margin: 4px;
+  display: flex;
+}
+
+.model {
+  position: absolute;
+  top: 29%;
+  left: 34%;
+  z-index: 22;
+  width: 25rem;
+  height: 21rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.close i {
+  padding-right: 2rem;
+  padding-top: 1rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: end;
+}
+
+.trans {
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+}
+
+.inbox {
+  display: flex;
+  padding: 1rem;
+  padding-right: 4rem;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.field {
+  padding: 10px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  background: orange;
+  padding: 1rem;
+  color: white;
+  border: 0px;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  background: red;
+  color: white;
+  padding: 1rem;
+  border: 0px;
+  border-radius: 20px;
+}
+
+
+.not{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 11rem;
+}
+
+.not h1{
+  color: white;
+}
+
+
+@media (min-width: 870px) and (max-width: 1130px) {
+  .content{
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 870px) {
+  .content{
+    grid-template-columns: none;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 550px) {
+  .content{
+    grid-template-columns: none;
+    padding-left: 7px;
+  }
+  .list i{
+    font-size: 44px;
+  }
+  .content h2,p{
+    font-size: 1rem;
+  }
+  .end{
+    margin: 0px;
+  }
+  .list .delete{
+    margin: 0px;
+    font-size: 44px;
+  }
+  .list .edit{
+    margin: 0px;
+    font-size: 44px;
+  }
+}
+
+@media (min-width: 790px) and (max-width: 1000px) {
+  .model{
+    left: 28%;
+  }
+}
+@media (min-width: 600px) and (max-width: 790px) {
+  .model{
+    left: 17%;
+  }
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .model{
+    left: 10%;
+    width: 19rem;
+  }
+}
+ 
